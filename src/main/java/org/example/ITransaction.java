@@ -10,6 +10,5 @@ public interface ITransaction {
     public int getMoney();
     public void setMoney(int money);
     public Date getDate();
-    public void setDate(Date date);
     public void showTransaction();
 }

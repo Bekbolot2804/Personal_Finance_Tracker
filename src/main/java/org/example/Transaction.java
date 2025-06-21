@@ -2,11 +2,15 @@ package org.example;
 
 import java.util.Date;
 
+
+//Реализация класса Транзакция
+//у него 4 параметра(отправитель, получатель, кол-во денег и дата)
+//Типичные геттеры и сеттеры и показ транзакций
 public class Transaction implements ITransaction{
     private User sender;
     private User recipient;
     private int money;
-    private Date date;
+    private Date date = new Date();
 
     public Transaction(User sender, User recipient, int money) {
         setMoney(money);
@@ -14,7 +18,6 @@ public class Transaction implements ITransaction{
         setRecipient(recipient);
         sender.reduce(money);
         recipient.increase(money);
-        setDate(new Date());
     }
 
     @Override
@@ -50,11 +53,6 @@ public class Transaction implements ITransaction{
     @Override
     public Date getDate(){
         return date;
-    }
-
-    @Override
-    public void setDate(Date date){
-        this.date = date;
     }
 
     @Override

@@ -1,8 +1,14 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
+//Реализация класса Пользователя,
+//у него 5 параметров(имя, пароль, статус, деньги, динамический массив Транзакций я думаю
+//его заменить на HashMap или HashSet)
+//Методы класса: Типичные геттеры и сеттеры для всех параметров
+//Другие методы: показать транзакции, перевести, увеличить, уменьшить деньги, показ баланса
 public class User implements IUser{
     private String name;
     private String password;
